@@ -1,0 +1,9 @@
+.movie-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-list > div{
+    display: flex;
+    flex-direction: row;
+}
