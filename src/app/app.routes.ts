@@ -6,7 +6,7 @@ import { PractiseComponent } from './components/practise/practise.component';
 export const routes: Routes = [
     {
         path:'',
-        redirectTo:'practice',
+        redirectTo:'search',
         pathMatch:'full'
 
     },

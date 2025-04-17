@@ -1,6 +1,9 @@
 export  const top100HollywoodMovies: Movie[] = [
 
     
+
+
+
     { title: "The Godfather", director: "Francis Ford Coppola", releaseYear: 1972 },
     { title: "Citizen Kane", director: "Orson Welles", releaseYear: 1941 },
     { title: "Casablanca", director: "Michael Curtiz", releaseYear: 1942 },
@@ -105,5 +108,6 @@ export  const top100HollywoodMovies: Movie[] = [
     title: string;
     director: string;
     releaseYear: number;
+  
   }
   

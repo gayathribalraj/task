@@ -1,0 +1,49 @@
+import { Component } from '@angular/core';
+import { top100HollywoodMovies } from '../../AppData/AppConstants';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-search-movie',
+  imports: [FormsModule, CommonModule],
+  templateUrl: './search-movie.component.html',
+  styleUrl: './search-movie.component.scss'
+})
+export class SearchMovieComponent {
+  
+  _top100HollywoodMovies = top100HollywoodMovies;
+
+  
+  onchange(event: any) {
+    let inputValue = event.target.value.toLocaleLowerCase(); 
+    
+    this._top100HollywoodMovies = top100HollywoodMovies.filter(val => 
+      val.title.toLocaleLowerCase().includes(inputValue) ||  val.director.toLocaleLowerCase().includes(inputValue) ||val.releaseYear.toString().includes(inputValue));
+
+
+     
+    this._top100HollywoodMovies = top100HollywoodMovies.filter(director => 
+
+      director.director.toLocaleLowerCase().includes(inputValue).valueOf()
+    )
+    console.log(this._top100HollywoodMovies);
+    
+  }
+  // conVarYear(inputValue:number){
+    
+  //   if(!isNaN(inputValue)){
+  //     this._top100HollywoodMovies = this._top100HollywoodMovies.filter(value=>value.releaseYear === inputValue)
+
+  //   }
+  //   else{
+  //           alert("Its not a Year")
+  //   }
+  // }
+  
+
+
+
+
+
+
+}

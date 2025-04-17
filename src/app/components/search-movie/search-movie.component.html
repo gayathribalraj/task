@@ -1,20 +1,27 @@
 
-<div>
-<label>Search Top100Hollywood Movies</label>
-<!-- <input type="text" (change)="filterdata($event)" /> -->
 
-<!-- <div><p>{{list}}</p></div> -->
+<div class="container ">
+
+<div class="textbox">
+<label class="label">Search Top100Hollywood Movies</label>
+<input type="text" (input)="onchange($event)"/> <button type="button" style="margin: 20px;">Search</button>
+
+</div>
 
 
-</div><br>
 
-
-<div class="movie-list" *ngFor="let Movies of _top100HollywoodMovies" >
+ <div class="movie-list" *ngFor="let Movies of _top100HollywoodMovies" >
      
-<div>title: {{Movies.title}}</div>
-<div>director: {{Movies.director}}</div>
-<div>releaseYear: {{Movies.releaseYear}}</div>
+<div>Title: {{Movies.title}}</div>
+<div>Director: {{Movies.director}}</div>
+<div>ReleaseYear: {{Movies.releaseYear}}</div>
 
+<br>
+
+</div>
+
+<p *ngIf="_top100HollywoodMovies.length === 0">No Match Found</p>
 
 
 </div>
+<!-- <p *ngIf="showResult">{{Result}}</p> -->
