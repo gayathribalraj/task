@@ -26,7 +26,9 @@ export class SearchMovieComponent {
             return;
         }else{
             // no search found in title so search in year
-            this._top100HollywoodMovies = top100HollywoodMovies.filter(m=>m.releaseYear == inputValue)
+            // this._top100HollywoodMovies = top100HollywoodMovies.filter(m=>m.releaseYear == inputValue)
+            this._top100HollywoodMovies = top100HollywoodMovies.filter(val => val.releaseYear.toString().includes(inputValue))
+            console.log("this._top100HollywoodMovies", this._top100HollywoodMovies)
         }
     }else{ // inputValue is not a number check in name and director only
       inputValue = (inputValue as string).toLowerCase()

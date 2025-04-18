@@ -2,26 +2,31 @@
 
 <div class="container ">
 
-<div class="textbox">
-<label class="label">Search Top100Hollywood Movies</label>
-<input type="text" (input)="onchange($event)"/> <button type="button" style="margin: 20px;">Search</button>
-
-</div>
-
-
-
- <div class="movie-list" *ngFor="let Movies of _top100HollywoodMovies" >
-     
-<div>Title: {{Movies.title}}</div>
-<div>Director: {{Movies.director}}</div>
-<div>ReleaseYear: {{Movies.releaseYear}}</div>
-
-<br>
-
-</div>
-
-<p *ngIf="_top100HollywoodMovies.length === 0">No Match Found</p>
-
-
-</div>
-<!-- <p *ngIf="showResult">{{Result}}</p> -->
+    <div class="textbox">
+    <label class="label">Search Top100Hollywood Movies</label>
+    
+    <input type="text" (input)="onchange($event)"/> <button type="button" style="margin: 20px;">Search</button>
+    
+    </div>
+    
+    <div class="phara"><p *ngIf="_top100HollywoodMovies.length >= 0"> Total Length of Movies : {{_top100HollywoodMovies.length}}</p></div>
+    
+    
+    
+     <div class="movie-list" *ngFor="let Movies of _top100HollywoodMovies" >
+         
+    <div>Title: {{Movies.title}}</div>
+    <div>Director: {{Movies.director}}</div>
+    <div>ReleaseYear: {{Movies.releaseYear}}</div>
+    
+    <br>
+    
+    </div>
+    
+    <p *ngIf="_top100HollywoodMovies.length === 0">No Match Found</p>
+    
+    
+    
+    </div>
+    <!-- <p *ngIf="showResult">{{Result}}</p> -->
+    
